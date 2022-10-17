@@ -1,7 +1,4 @@
-@import 'swiper/scss';
-@import 'swiper/scss/navigation';
-@import 'swiper/scss/pagination';
-
+@import 'node_modules/swiper/swiper';
 .swiper {
     width: 100%;
     height: 500px;

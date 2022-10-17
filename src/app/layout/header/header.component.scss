@@ -12,9 +12,15 @@ header {
         z-index: 1000;
     }
     .cart-btn{
-        border: 1px solid #dee2e6;
-        .btn:hover {
-            background-color: #999;
+        .btn{
+        border: 1px #17a2b8 solid !important;
+        border-radius: 5px;
+        outline: none;
+        }
+        .btn:hover{
+            background-color: #17a2b8;
+            color: #fff;
+            transition: .3s;
         }
     }
 
@@ -31,6 +37,9 @@ header {
     .search-icon {
         position: absolute;
         right: 25px;
+    }
+    .form-control{
+        border: 1px #17a2b8 solid !important;
     }
 }
 
