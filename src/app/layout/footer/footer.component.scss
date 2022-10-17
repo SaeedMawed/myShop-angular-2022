@@ -1,0 +1,162 @@
+// Start Footer Style
+$primary-color: #007bff !important;
+$secondary-color: #6c757d !important; //page , body color
+$success-color: #28a745 !important;
+$danger-color:#a62a2a !important;
+$light-color:#f8f9fa !important;
+$dark-color:#121212 !important;
+$muted-color:#171717 !important;
+$white-color:#fff !important;
+$warning-color:#ffc107 !important;
+$gray-color:#f5f5f5;
+$transation: all .5s;
+$opacity: 87%;
+$opacity-bold:95%;
+.footer {
+    transition: $transation;
+    position: relative;
+    z-index: 30;
+    background: linear-gradient(to bottom, #17a2b8, #ef394e);
+    .footer-top {
+        height: auto;
+        padding: 55px 0 0 0;
+        margin-top: 50px;
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            color: #121212;
+            line-height: 25px;
+        }
+        h2,
+        h3 {
+            color: $white-color;
+            opacity: $opacity;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .segment-one {
+            h3 {
+                font-family: Courgette;
+                letter-spacing: 3px;
+                margin: 10px 0;
+            }
+        }
+        .segment-tow {
+            h2 {
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            h2:before {
+                content: "|";
+                color: $danger-color;
+                padding-right: 10px;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                    line-height: 40px;
+                    a {
+                        color: #121212 !important;
+                        text-decoration: none;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+        .segment-three {
+            h2 {
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            h2:before {
+                content: '|';
+                color: $danger-color;
+                padding-right: 10px;
+            }
+            a {
+                display: inline-block;
+                border-radius: 50%;
+                margin: 0 .25rem;
+                color: #fff ;
+                .fab  {
+                    opacity: $opacity;
+                    display: inline-block;
+                    font-size: 30px !important;
+                }
+            }
+        }
+        .segment-four {
+            h2 {
+                font-family: Poppins;
+                text-transform: uppercase;
+            }
+            h2:before {
+                content: '|';
+                color: $danger-color;
+                padding-right: 10px;
+            }
+            form input[type=submit] {
+                background: linear-gradient(to left, #6a2b31, #dc3545);
+                border: none;
+                padding: 3px 7px;
+                //margin-left: -5px;
+                color: #fff;
+                opacity: $opacity;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            form input[type=email] {
+                opacity: $opacity-bold;
+            }
+        }
+    }
+    .footer-bottom-text {
+        text-align: center;
+        line-height: 75px;
+        margin: 0;
+        padding: 10px;
+        // margin-left: $left-side-width;
+        color: $white-color;
+        //opacity: $opacity;
+    }
+    @media only screen and (min-width:768px) and (max-width:991px) {
+        .md-mb-30 {
+            margin-bottom: 30px;
+        }
+        .footer-bottom-text {
+            margin: 0;
+        }
+    }
+    @media only screen and (max-width:767px) {
+        .sm-mb-30 {
+            margin-bottom: 30px;
+        }
+        .footer-top {
+            padding: 50px 0;
+        }
+        .footer-bottom-text {
+            margin: 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        // footer for small width
+        .footer-top {
+            width: 100%;
+            margin: 0;
+            padding: 80px 20px !important;
+        }
+    }
+}
+
+.segment-one{
+    i{
+        margin-right: 3px !important;
+    }
+
+}

@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$theme-colors: ( "primary": #0074d9,
+"danger": #dc3545,
+"dark": #434343,
+"info": #17a2b8,
+"success":#17a2b8,
+"light":#eee,
+"white":#fff,
+"black":#000,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+/*
+** Overlay : all overlay in our site must have these properties
+*/
+
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+** Prefixes Mixin
+** Auto Add Prefixes To Properties
+*/
+
+@mixin prefixer ($property, $value, $prefixes:()) {
+    @each $prefix in prefixes {
+        #{'-'  + $prefix + '-' + $property }: $value;
+    }
+    #{$property}:$value;
+}
+
+
+/*
+** Animation Mixin
+** Auto Add Prefixes To Animation
+*/
+
+@mixin keyFrame($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@keyframes rotateY {
+    0%,
+    80% {
+        transform: rotateY(360deg);
+    }
+}
+
+@include keyFrame (fadeInOut) {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+@keyframes bgcolors {
+    0% {
+        background-color: #017aba;
+    }
+    10% {
+        background-color: #313337;
+    }
+    20% {
+        background-color: #b93b47;
+    }
+    30% {
+        background-color: #4a4f4b;
+    }
+    40% {
+        background-color: #e8b543;
+    }
+    50% {
+        background-color: #6573a2;
+    }
+    60% {
+        background-color: #101012;
+    }
+    70% {
+        background-color: #303540;
+    }
+    80% {
+        background-color: #f23083;
+    }
+    90% {
+        background-color: #5e4036;
+    }
+    100% {
+        background-color: #6aaaa6;
+    }
+}
+
+@mixin category-color($color) {
+    .caption {
+        background-color: $color;
+        .btn:hover {
+            color: $color !important;
+        }
+    }
+}

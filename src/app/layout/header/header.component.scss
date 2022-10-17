@@ -1,0 +1,36 @@
+header {
+    width: 100%;
+    position: relative;
+    height: 70px;
+    .shadow-lg{
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.175) !important;
+    }
+    .navbar{
+        width: 100%;
+        position: fixed;
+        padding: 0 50px;
+        z-index: 1000;
+    }
+    .cart-btn{
+        border: 1px solid #dee2e6;
+        .btn:hover {
+            background-color: #999;
+        }
+    }
+
+}
+
+.logo{
+    max-height: 60px;
+    width: 150px;
+}
+.search-box{
+    align-items: center;
+    display: flex;
+    text-align: center;
+    .search-icon {
+        position: absolute;
+        right: 25px;
+    }
+}
+

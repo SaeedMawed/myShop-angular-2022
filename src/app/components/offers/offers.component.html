@@ -1,0 +1,33 @@
+<div class="offers-container">
+    <div class="row">
+        <div class="offers-caption col-lg-2">
+            <img class="d-flex offers-image" src="./../../../assets/imgs/Special-Offer-Transparent-PNG.png" alt="">
+            <button class="btn mybtn">more offers</button>
+        </div>
+        <div class="swiper-container col-lg-10">
+            <swiper [config]="config"
+          >
+                <ng-template swiperSlide class="swiper-slide border" *ngFor="let offer of offersList">
+                    <div class="product " routerLink="/cart">
+                        <img src="{{offer.image}}">
+                        <h2 class="title">{{offer.title}}</h2>
+                        <div class="caption">
+                            <div class="d-flex ">
+                                <h3 class="sale">50%</h3>
+                                <del>{{offer.price * 2}}</del>
+                            </div>
+                            <h4 class="price "><strong>{{offer.price}}</strong></h4>
+                        </div>
+                    </div>
+                </ng-template>
+
+            </swiper>
+            <div class="swiper-pagination "></div>
+            <div class="swiper-button-next swiper-button-white "></div>
+            <div class="swiper-button-prev swiper-button-white "></div>
+        </div>
+    </div>
+
+
+</div>
+
