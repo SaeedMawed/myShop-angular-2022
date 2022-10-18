@@ -4,13 +4,20 @@
     max-width: 100%;
     .row{
         max-width: 100%;
+        margin: auto;
     }
     .border-right{
         border-right: 1px solid #eee;
+        @media screen and(max-width:576px) {
+            border-right: none;
+        }
     }
     .cart-table{
         th{
             text-align: center;
+            @media screen and(max-width:576px) {
+                font-size: 11px;
+            }
         }
         .item-image{
             width: 100px;
@@ -24,17 +31,23 @@
                 height: 100%;
             }
         }
-        .item-title,.item-desc,.item-price{
+        .item-title,.item-desc,.item-price,.item-qty{
             font-size: 14px;
             font-weight: 400;
             @media screen and (max-width:576px){
-                font-size: 12px;
+                font-size: 10px;
             }
 
         }
-        i{
-            color: #fff;
+        .btn{
+            @media screen and (max-width:576px){
+                padding: 5px;
+            }
+            i{
+                color: #fff;
+            }
         }
+
     }
     .cart-info-box{
 

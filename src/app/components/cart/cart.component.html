@@ -18,8 +18,8 @@
                         <td class="item-title">{{item.title}}</td>
                         <td class="item-desc">{{item.description}}</td>
                         <td class="item-price">{{item.price}}</td>
-                        <td class="item-Qty">{{item.quantity}}</td>
-                        <td class="item-Qty"><strong>{{item.quantity * item.price | number: '1.0-2'}}</strong></td>
+                        <td class="item-qty">{{item.quantity}}</td>
+                        <td class="item-qty"><strong>{{item.quantity * item.price | number: '1.0-2'}}</strong></td>
 
                         <td><button class=" btn btn-danger" (click)="removeItem(item)"><i class=" fas fa-trash-alt " ></i></button></td>
                     </tr>
