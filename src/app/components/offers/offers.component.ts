@@ -44,7 +44,7 @@ export class OffersComponent implements OnInit {
             slidesPerView: 1,
             spaceBetween: 20
         },
-        360: {
+        300: {
             slidesPerView: 2,
             spaceBetween: 15
         },

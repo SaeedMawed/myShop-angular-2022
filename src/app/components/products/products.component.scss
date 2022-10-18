@@ -1,4 +1,5 @@
 @import "../../../styles.scss";
+/*
 .products-container{
     .product-card {
         width: 20%;
@@ -28,7 +29,7 @@
     }
 
 }
-
+*/
 
 .products-container {
     position: relative;
@@ -39,12 +40,11 @@
     @media only screen and (max-width: 410px) {
         padding-left: 0px !important;
         padding-right: 0px !important;
+        margin-left: 15px !important;
+        margin-right: 15px !important;
         h2 {
             font-size: 13px !important;
         }
-    }
-    .product {
-        padding: .75rem;
     }
     .single-blog {
         //box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
@@ -95,19 +95,15 @@
         h2 a {
             text-decoration: none;
         }
-
-
     }
-    @media screen and (min-width: 1150px) {
-        .col-lg-3 {
-            flex: 0 0 20%;
-            max-width: 20%;
-        }
-    }
+
     .product {
+        padding: .75rem;
+        width: 20%;
         @media screen and (max-width: 576px) {
             flex: 0 0 50%;
-            max-width: 50%;
+            width: 50%;
+            padding: .75rem 5px;
         }
     }
     .card-btn {

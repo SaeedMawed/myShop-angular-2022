@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { FakeapiService } from 'src/app/services/fakeapi.service';
 
 @Component({
@@ -9,13 +10,21 @@ import { FakeapiService } from 'src/app/services/fakeapi.service';
 export class ProductsComponent implements OnInit {
 
   productList:any=[];
-  constructor(private api:FakeapiService) { }
+  constructor(private api:FakeapiService,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.api.getAllProducts().subscribe(res=>{
       this.productList=res;
+      this.productList.forEach((a:any)=>{
+        Object.assign(a,{quantity:1,total:a.price});
+      })
     })
+  }
 
+  addToCart(product:any){
+
+    this.cartService.increaseQty();
+    this.cartService.addToCart(product);
   }
 
 }

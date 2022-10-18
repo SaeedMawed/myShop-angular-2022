@@ -1,0 +1,84 @@
+<div class="container cart-container" >
+   <ng-container *ngIf="totalOfPiece > 0">
+    <div class="row">
+        <div class="cart-table col-lg-8 col-md-12 border-right">
+            <table class="table table-responsive ">
+                <thead>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cartItems">
+                        <td class="item-image"><img src="{{item.image}}" alt=""></td>
+                        <td class="item-title">{{item.title}}</td>
+                        <td class="item-desc">{{item.description}}</td>
+                        <td class="item-price">{{item.price}}</td>
+                        <td class="item-Qty">{{item.quantity}}</td>
+                        <td class="item-Qty"><strong>{{item.quantity * item.price | number: '1.0-2'}}</strong></td>
+
+                        <td><button class=" btn btn-danger" (click)="removeItem(item)"><i class=" fas fa-trash-alt " ></i></button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cart-info-box col-lg-4 position-relative ">
+            <div class="cart-info">
+                <h3 class="title bg-danger">Receipt</h3>
+                <div class="products-price d-flex ">
+                    <h5>Produts price ({{totalOfPiece}})</h5>
+                    <h5 class="text-right">{{totalPrice | number: '1.0-2'}}$</h5>
+                </div>
+                <div class="discount d-flex border-bottom">
+                    <h5>Discount 10%</h5>
+                    <h5 class="text-right" >{{totalPrice * .1 | number: '1.0-2'}}$</h5>
+                </div>
+                <div class="sum d-flex ">
+                    <h5>Sum</h5>
+                    <h5 class="text-right">{{totalPrice + totalPrice * .1 | number: '1.0-2'}}$</h5>
+                </div>
+                <div class="shipping-cost d-flex border-bottom">
+                    <h5>Shipping cost</h5>
+                    <h5 class="text-right">Free</h5>
+                </div>
+                <div class="total d-flex ">
+                    <h5>Total</h5>
+                    <h5 class="text-right"><strong>{{totalPrice + totalPrice * .1 | number: '1.0-2'}}$</strong></h5>
+                </div>
+                <div class="info d-flex">
+                    <h5>Total of types is </h5>
+                    <h5 class="text-right">{{countOfTypes}}</h5>
+
+                </div>
+                <div class="info d-flex">
+                    <h5>Total of items is </h5>
+                    <h5 class="text-right">{{totalOfPiece}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+   </ng-container>
+   <ng-container *ngIf="totalOfPiece == 0">
+        <div class="empty-container">
+            <div class="container">
+                <div class="card">
+                    <h5 class="card-title">
+
+                    </h5>
+                </div>
+                <div class="center">
+                    <img src="assets/imgs/Empty-cart.png" alt="">
+                    <h4>Your cart is empty</h4>
+                    <h6>Add item to it now</h6>
+                    <button class="btn btn-info" routerLink="/home">Shop now</button>
+                </div>
+            </div>
+        </div>
+   </ng-container>
+</div>

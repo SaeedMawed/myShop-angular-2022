@@ -1,7 +1,7 @@
 <div class="products-container m-5 px-5">
     <div class="row">
         <ng-container *ngFor="let product of productList">
-            <div class="product col-lg-3 col-md-4 col-sm-6 p-2 " >
+            <div class="product col-lg-3 col-md-4  p-2 " >
                 <div class="single-blog " style="cursor: pointer; ">
                     <img src="{{product.image}}" alt="Dress A " class="p-2">
                     <div class="card-content ">
@@ -10,11 +10,10 @@
                         <h3 class="cost ">{{product.price}}$</h3>
                     </div>
                     <div class="card-btn btn-group ">
-                        <a class="btn-info more-info btn " href="# " >add to cart</a>
+                        <a class="btn-info more-info btn " (click)="addToCart(product)" >add to cart</a>
                     </div>
                 </div>
             </div>
         </ng-container>
-
     </div>
 </div>
