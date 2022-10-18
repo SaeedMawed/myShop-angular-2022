@@ -105,6 +105,11 @@
             width: 50%;
             padding: .75rem 5px;
         }
+        @media screen and (max-width: 991px) {
+            flex: 0 0 33%;
+            width: 33%;
+            padding: .75rem 5px;
+        }
     }
     .card-btn {
         width: 100%;
@@ -137,11 +142,6 @@
                 align-items: center;
             }
         }
-        .new-product {
-            //margin-bottom: 15px;
-            @media screen and (max-width: 767px) {
-                float: none;
-            }
-        }
+
     }
 }
