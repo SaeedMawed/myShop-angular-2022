@@ -1,0 +1,94 @@
+@import "../../../assets/styles/variable.scss";
+.product-info-container{
+    margin: 30px 0;
+    .container{
+        .row{
+            .image-box{
+                position: relative;
+                .image{
+                    img{
+                        max-width: 100%;
+                        height: 300px;
+                        margin-top: 80px;
+                        @media screen and (max-width:575px) {
+                            margin: auto;
+                            display: flex;
+                            height: 200px;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        .info-box{
+            border-left: 1px solid $light;
+            .card{
+                border: none;
+                h5,p{
+                    margin-bottom: 10px;
+                }
+                h5 {
+                    font-size: $font-size-lg;
+                    @media screen and (max-width:767px) {
+                        font-size: $font-size-sm;
+                    }
+                }
+
+                p {
+                    @media screen and (max-width:767px) {
+                        font-size: 10px;
+                    }
+                }
+                .title{
+                    font-size: 16px;
+                    font-weight: $font-bold;
+                    color: $danger !important;
+
+                    @media screen and (max-width:767px) {
+                        font-size: $font-size-sm;
+                    }
+                }
+                .category , .price,.like-count{
+                    font-weight: $font-bold;
+                }
+                .stars{
+                    margin-left: -5px;
+                    .rating-list li {
+                        float: right;
+                        color: #ddd;
+                        padding: 10px 5px;
+
+                      }
+
+                      .rating-list li:hover,
+                      .rating-list li:hover ~ li, .rating-list li.selected {
+                        color: #ffd700;
+                      }
+
+                      .rating-list {
+                        display: inline-block;
+                        list-style: none;
+                      }
+                }
+                .likes{
+                    display: flex;
+                    align-items: center;
+                    margin: 5px 0;
+                    .like-count {
+                        margin-right: 5px;
+                    }
+                    i{
+                        font-size: 15px;
+                    }
+
+                }
+            }
+        }
+        }
+        .btn-info{
+            color: $white;
+            max-width: 200px;
+            padding: 10px;
+        }
+    }
+}
+

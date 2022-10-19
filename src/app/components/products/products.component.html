@@ -7,10 +7,14 @@
                     <div class="card-content ">
                         <h2 class="product-title ">{{product.title}}</h2>
                         <h3 class="product-desc">{{product.description}}</h3>
-                        <h3 class="cost ">{{product.price}}$</h3>
+                        <div class="d-flex justify-content-between">
+                            <h3 class="cost justify-content-start">{{product.price}}$</h3>
+                            <a class="justify-content-end more-info " [routerLink]="['/product', product.id, 'details']">more info</a>
+                        </div>
                     </div>
                     <div class="card-btn btn-group ">
                         <a class="btn-info more-info btn " (click)="addToCart(product)" >add to cart</a>
+
                     </div>
                 </div>
             </div>

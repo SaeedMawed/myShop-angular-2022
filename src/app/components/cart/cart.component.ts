@@ -21,7 +21,6 @@ export class CartComponent implements OnInit {
       this.countOfTypes=res.length;
       this.totalOfPiece=this.cartService.getQty();
       this.totalPrice=this.cartService.grandTotal;
-
     })
 
 

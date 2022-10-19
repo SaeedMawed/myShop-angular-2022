@@ -21,6 +21,10 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  getProductList(){
+    return this.productList;
+  }
+
   addToCart(product:any){
 
     this.cartService.increaseQty();

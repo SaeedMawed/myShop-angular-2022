@@ -8,7 +8,7 @@
             <swiper [config]="config"
           >
                 <ng-template swiperSlide class="swiper-slide border" *ngFor="let offer of offersList">
-                    <div class="product " routerLink="/cart">
+                    <div class="product " [routerLink]="['/product', offer.id, 'details']">
                         <img src="{{offer.image}}">
                         <h2 class="title">{{offer.title}}</h2>
                         <div class="caption">

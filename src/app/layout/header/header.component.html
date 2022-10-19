@@ -13,11 +13,11 @@
             </div>
 
           <div class="header-btn d-flex">
-            <button class="btn position-relative login-btn" routerLink="login">
+            <button class="btn position-relative login-btn" routerLink="login" routerLinkActive="active" ariaCurrentWhenActive="page">
                 <i class="fas fa-sign-in-alt "><span class="pl-3">Login | Sing up</span></i>
             </button>
             <h3 class="virtical-line">|</h3>
-            <button class="btn position-relative" routerLink="/cart">
+            <button class="btn position-relative" routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">
                 <i class="fas fa-cart-plus">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{qty}}</span>
                     <span class="visually-hidden">unread messages</span>

@@ -14,4 +14,9 @@ export class FakeapiService {
       return res;
     }))
   }
+  getProduct(id:any){
+    return this.http.get<any>("https://fakestoreapi.com/products/"+id).pipe(map((res:any)=>{
+      return res;
+    }))
+  }
 }
