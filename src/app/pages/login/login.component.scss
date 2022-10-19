@@ -53,37 +53,38 @@
                         }
                     }
                 }
-                .links{
 
-                    .btn{
-                        width: 190px;
-                        color: $danger;
-                        &:hover{
-                            outline: none;
-                        }
-                    }
-                    .form-forgotten-password{
-                        color: $white;
-                        margin-left: auto;
-                        margin-right: 10px;
 
-                        &:hover{
-                            background-color: $white;
-                            color: $danger;
-                        }
-                    }
-                    .form-create-an-account{
-                        margin-left: 10px;
-                        margin-right: auto;
-                        color: $info;
-                        border: 1px $info solid;
-                        &:hover{
-                            background-color: $info;
-                            color: $white;
-                        }
-                    }
+            }
+        }
+        .links{
+
+            .btn{
+                width: 190px;
+                color: $danger;
+                &:hover{
+                    outline: none;
                 }
+            }
+            .form-forgotten-password{
+                color: $white;
+                margin-left: auto;
+                margin-right: 10px;
 
+                &:hover{
+                    background-color: $white;
+                    color: $danger;
+                }
+            }
+            .form-create-an-account{
+                margin-left: 10px;
+                margin-right: auto;
+                color: $info;
+                border: 1px $info solid;
+                &:hover{
+                    background-color: $info;
+                    color: $white;
+                }
             }
         }
 

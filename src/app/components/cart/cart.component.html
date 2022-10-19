@@ -41,7 +41,7 @@
                 </div>
                 <div class="sum d-flex ">
                     <h5>Sum</h5>
-                    <h5 class="text-right">{{totalPrice + totalPrice * .1 | number: '1.0-2'}}$</h5>
+                    <h5 class="text-right">{{totalPrice - totalPrice * .1 | number: '1.0-2'}}$</h5>
                 </div>
                 <div class="shipping-cost d-flex border-bottom">
                     <h5>Shipping cost</h5>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="total d-flex ">
                     <h5>Total</h5>
-                    <h5 class="text-right"><strong>{{totalPrice + totalPrice * .1 | number: '1.0-2'}}$</strong></h5>
+                    <h5 class="text-right"><strong>{{totalPrice - totalPrice * .1 | number: '1.0-2'}}$</strong></h5>
                 </div>
                 <div class="info d-flex">
                     <h5>Total of types is </h5>

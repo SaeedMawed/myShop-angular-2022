@@ -105,5 +105,10 @@
     }
     .btn-info{
         color: $white;
+        &:hover{
+            background-color: $white;
+            color: $info;
+            border: 1px $info solid;
+        }
     }
 }

@@ -29,15 +29,16 @@
                           </div>
                         </div>
                         <div class="form-row login-btn">
-                          <button type="submit" class="btn btn-info">Log in</button>
+                          <button class="btn btn-info" routerLink="/login">Log in</button>
                         </div>
                       </div>
-                      <div class="d-flex justify-content-between  pt-3 links">
-                        <button  class="btn btn-danger shadow-lg form-forgotten-password ">&larr; Forgotten password</button>
-                        <button  class="btn btn-white shadow-lg form-create-an-account">Create an account &rarr;</button>
-                      </div>
+
                     </div>
                 </form>
+                <div class="d-flex justify-content-between  pt-3 links">
+                    <button  class="btn btn-danger shadow-lg form-forgotten-password " routerLink="/login">&larr; Forgotten password</button>
+                    <button  class="btn btn-white shadow-lg form-create-an-account" routerLink="/login">Create an account &rarr;</button>
+                  </div>
             </div>
             <div class="signup-box col-lg-4 col-md-5 ">
                 <div class="form-sign-in-with-social">
@@ -45,8 +46,8 @@
                       <span class="form-title">Sign in with</span>
                     </div>
                     <div class="form-sign-in-with-social-btns">
-                      <button class="btn btn-danger form-google-button shadow-lg">Google</button>
-                      <button class="btn btn-white form-facebook-button shadow-lg">Facebook</button>
+                      <button class="btn btn-danger form-google-button shadow-lg" routerLink="login">Google</button>
+                      <button class="btn btn-white form-facebook-button shadow-lg" routerLink="login">Facebook</button>
                     </div>
                   </div>
             </div>
