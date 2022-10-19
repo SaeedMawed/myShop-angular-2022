@@ -56,6 +56,23 @@
             }
             .card-content {
                 padding: 0px 10px;
+                a.more-info{
+                    text-decoration: underline !important;
+                    color: $danger;
+                    margin-top: -5px;
+                    font-weight: 500;
+                }
+                @media screen and (max-width:767px) {
+                    .price-box {
+                        h3,a{
+                            font-size: $font-size-sm !important;
+                        }
+                        a{
+                            margin-top: -2px;
+                        }
+                    }
+                }
+
             }
             .product-title,.product-desc{
                 text-overflow: ellipsis;
@@ -95,9 +112,3 @@
 
 }
 
-a.more-info{
-    text-decoration: underline !important;
-    color: $danger;
-    margin-top: -5px;
-    font-weight: 500;
-}
