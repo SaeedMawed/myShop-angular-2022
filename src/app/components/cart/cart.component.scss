@@ -1,3 +1,4 @@
+@import "../../../assets/styles/variable.scss";
 .cart-container{
     padding: 20px 0;
     position: relative;
@@ -7,16 +8,17 @@
         margin: auto;
     }
     .border-right{
-        border-right: 1px solid #eee;
+        border-right: 1px solid $light;
         @media screen and(max-width:576px) {
             border-right: none;
         }
     }
     .cart-table{
-        th{
+        th,td{
             text-align: center;
             @media screen and(max-width:576px) {
                 font-size: 10px;
+                padding: 8px 5px;
             }
         }
         .item-image{
@@ -32,8 +34,8 @@
             }
         }
         .item-title,.item-desc,.item-price,.item-qty{
-            font-size: 14px;
-            font-weight: 400;
+            font-size: $font-size-lg;
+            font-weight: $font-normal;
             @media screen and (max-width:576px){
                 font-size: 10px;
             }
@@ -42,9 +44,10 @@
         .btn{
             @media screen and (max-width:576px){
                 padding: 5px;
+                font-size: 10px;
             }
             i{
-                color: #fff;
+                color: $white;
             }
         }
 
@@ -57,14 +60,14 @@
             max-height: 500px;
             padding: 20px;
             h5{
-                font-size: 15px;
+                font-size: $font-size-lg;
                 padding: 0 10px;
             }
             .title{
                 text-align: center;
-                color: #fff;
-                font-size: 18px;
-                font-weight: 600;
+                color: $white;
+                font-size: $font-size-lg;
+                font-weight: $font-bold;
                 padding: 10px;
             }
             .text-right{
@@ -101,6 +104,6 @@
         }
     }
     .btn-info{
-        color: #fff;
+        color: $white;
     }
 }

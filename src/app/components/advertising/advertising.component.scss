@@ -1,33 +1,35 @@
 @import 'node_modules/swiper/swiper';
+@import '../../../assets/styles/variable.scss';
+
 .swiper {
     width: 100%;
     height: 500px;
     .swiper-slide{
         transition-duration:1s !important;
         position: relative;
-    }
-    .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-    .swiper-slide-caption{
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%,-50%);
-        font-size: 20px !important;
-         font-weight: bolder;
-         text-shadow: 0 1px 5px #17a2b8, 0 -1px 5px red;
-         color: #fff;
-        h5{
-            font-weight: 700;
-            font-size: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .swiper-slide-caption{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            font-size: 20px !important;
+             font-weight: bolder;
+             text-shadow: 0 1px 5px $info, 0 -1px 5px $danger;
+             color: #fff;
+            h5{
+                font-weight: 700;
+                font-size: 20px;
 
+            }
         }
     }
+
 
 
 

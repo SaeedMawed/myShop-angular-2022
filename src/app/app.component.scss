@@ -1,10 +1,17 @@
+
 *{
     margin: 0;
     padding: 0;
     outline: none;
 }
-a {
-    text-decoration: none;
+
+a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    &:hover,&:visited,&:focus,&:focus-visible,&:focus-within{
+        color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    }
 }
 ul {
     list-style: none;

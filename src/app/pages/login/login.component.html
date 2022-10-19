@@ -1,1 +1,55 @@
-<p>login works!</p>
+<div class="login-page-container">
+    <div class="container d-flex">
+        <div class="row center-box">
+            <div class="login-box col-lg-8 col-md-7 col-sm-12">
+                <form class="form-login">
+                    <div class="form-log-in-with-email">
+                      <div class="form-white-background shadow-lg p-3">
+                        <div class="form-title-row">
+                          <h1>Log in</h1>
+                        </div>
+                        <div class="alert alert-danger mb-3 d-none">
+                          <h3></h3>
+                        </div>
+                        <div class="alert alert-info mb-3 d-none" >
+                          <p class="text">
+                            Uesr with this email not active , please active your account.
+                          </p>
+                        </div>
+                        <div class="form-input mt-2">
+                          <div class="form-row">
+                            <label>
+                              <input type="email" name="username" placeholder="Username" />
+                            </label>
+                          </div>
+                          <div class="form-row">
+                            <label>
+                              <input type="password" name="password" placeholder="Password" />
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-row login-btn">
+                          <button type="submit" class="btn btn-info">Log in</button>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between  pt-3 links">
+                        <button  class="btn btn-danger shadow-lg form-forgotten-password ">&larr; Forgotten password</button>
+                        <button  class="btn btn-white shadow-lg form-create-an-account">Create an account &rarr;</button>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-box col-lg-4 col-md-5 ">
+                <div class="form-sign-in-with-social">
+                    <div class="form-row form-title-row">
+                      <span class="form-title">Sign in with</span>
+                    </div>
+                    <div class="form-sign-in-with-social-btns">
+                      <button class="btn btn-danger form-google-button shadow-lg">Google</button>
+                      <button class="btn btn-white form-facebook-button shadow-lg">Facebook</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
