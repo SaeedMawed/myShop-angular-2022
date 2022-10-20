@@ -134,7 +134,7 @@
         display: none;
         @media screen and(max-width:991px) {
             margin: 15px auto;
-            display: block !important;
+            //display: block !important;
             position: relative !important;
             z-index: 1000;
             font-size: $font-size-lg;

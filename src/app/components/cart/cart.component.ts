@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-import { FakeapiService } from 'src/app/services/fakeapi.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   countOfTypes:number=0;
   totalOfPiece:number=0;
   totalPrice:number=0;
-  constructor(private cartService:CartService) { }
+  constructor(private cartService:CartService,private dialog:DialogService) { }
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res=>{
@@ -26,7 +26,12 @@ export class CartComponent implements OnInit {
 
   }
   removeItem(item:any){
-    this.cartService.removeProduct(item);
+    this.dialog.deleteItemConfirm("Are you sure want to delete this record from your cart ?").afterClosed().subscribe(res=>{
+      if(res){
+        this.cartService.removeProduct(item);
+      }
+    })
+
   }
 
 }

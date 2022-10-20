@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variable.scss';
+
+
+.dialog-box{
+
+    .content-container{
+        .content-span {
+            margin: 25px 0px 25px;
+        }
+    }
+    button{
+        color: $white !important;
+        font-size: $font-size-lg;
+        width: 50%;
+        padding: 5px;
+    }
+    #cancel-button{
+        background-color: $info;
+    }
+    #confirm-button{
+        background-color: $danger;
+        display: block;
+        margin-left: auto;
+
+    }
+}
+

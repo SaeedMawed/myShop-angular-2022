@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
+import { DialogService } from './dialog.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +11,7 @@ export class CartService {
   public grandTotal :number = 0;// total of price
   public Qty:number=0//total of items
 
-  constructor() { }
+  constructor(private dialog:DialogService) { }
 
   getProducts(){
     return this.productList.asObservable();
@@ -29,6 +29,9 @@ export class CartService {
     }
     this.productList.next(this.cartItemsList);
     this.updateTotalPrice(product.price);
+    this.dialog.addedSuccessfully("Product successfully added to your shopping cart").afterClosed().subscribe(res=>{
+
+    })
   }
 
   updateQty(product:any):boolean{
